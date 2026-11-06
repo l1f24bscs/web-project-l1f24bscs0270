@@ -1,0 +1,628 @@
+/* ==========================================================================
+   PAGE 1: HOME.CSS
+   Rubric Practised: Element, Class & ID Selectors; Text & Font Properties;
+   Borders; Background Colours; Distinct Navbar Style #1.
+   ========================================================================== */
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ELEMENT SELECTORS (Rubric Requirement) */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcfaf4;
+    color: #1a1a1a;
+    line-height: 1.65;
+}
+
+h1, h2, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+p {
+    font-size: 0.96rem;
+    letter-spacing: 0.2px;
+}
+
+strong {
+    font-weight: 600;
+    color: #111111;
+}
+
+/* ID SELECTORS (Rubric Requirement) */
+#home-page {
+    background-color: #fcfaf4;
+}
+
+#hero-banner {
+    position: relative;
+    min-height: 94vh;
+    background-color: #101010;
+    overflow: hidden;
+    color: #ffffff;
+    padding-bottom: 80px;
+    border-bottom: 4px solid #caa044;
+}
+
+#why-gamzoscape {
+    background-color: #fcfaf4;
+    border-bottom: 1px solid #ebe5d5;
+}
+
+#main-footer {
+    background-color: #0b0b0b;
+    color: #888888;
+    padding: 35px 0;
+    border-top: 2px solid #caa044;
+}
+
+/* NAVBAR STYLE #1: Transparent Glass Header with Gold Bottom Underline */
+.gamzo-header {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(202, 160, 68, 0.35);
+}
+
+.brand-logo-img {
+    height: 60px;
+    max-width: 240px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.main-nav ul li a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 0.84rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #caa044;
+}
+
+.login-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding: 8px 16px;
+    border: 1px solid #caa044;
+    border-radius: 3px;
+    background-color: rgba(202, 160, 68, 0.15);
+}
+
+.login-btn:hover {
+    background-color: #caa044;
+    color: #111111;
+}
+
+/* CLASS SELECTORS & TEXT/FONT PROPERTIES */
+.serif-heading {
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: #111111;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.serif-italic {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #f3d486;
+}
+
+.gold-accent-text {
+    color: #e0b656;
+    font-style: italic;
+}
+
+.inline-highlight {
+    background-color: #f3ead3;
+    padding: 2px 8px;
+    border-bottom: 1px dashed #caa044;
+    font-weight: 500;
+}
+
+.gold-divider {
+    width: 65px;
+    height: 3px;
+    background-color: #c99a38;
+    margin: 12px auto 35px auto;
+}
+
+.hero-bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.78));
+    z-index: 2;
+}
+
+.hero-body-wrapper {
+    position: relative;
+    z-index: 3;
+    padding-top: 75px;
+}
+
+.hero-kicker {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: #caa044;
+    margin-bottom: 12px;
+}
+
+.hero-headline {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 22px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.hero-subtext {
+    font-size: 1.05rem;
+    color: #e5e5e5;
+    margin-bottom: 34px;
+}
+
+.hero-subtext strong {
+    color: #ffffff;
+}
+
+.btn-gamzo {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.btn-gold {
+    background-color: #caa044;
+    color: #ffffff;
+    border: 2px solid #caa044;
+    box-shadow: 0 4px 14px rgba(202, 160, 68, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn-gold:hover {
+    background-color: #b38a32;
+    border-color: #b38a32;
+    color: #ffffff;
+}
+
+/* Sections, Borders & Background Colours */
+.intro-section, .workflow-section, .offices-section {
+    padding: 85px 0;
+    background-color: #fcfaf4;
+}
+
+.intro-copy-wrapper {
+    max-width: 780px;
+}
+
+.intro-bold-lead {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.intro-paragraph, .intro-paragraph-sub {
+    color: #4a4a4a;
+    margin-bottom: 14px;
+}
+
+.quote-banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+                url('../assets/images/journey.jpg') center/cover;
+    padding: 95px 0;
+    color: #ffffff;
+    border-top: 3px solid #caa044;
+    border-bottom: 3px solid #caa044;
+}
+
+.quote-banner-title {
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+.featured-villa-img {
+    border: 3px solid #e2d7be;
+}
+
+.step-card, .service-spec-card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #d8c394;
+    border-left: 4px solid #caa044;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+}
+
+.step-counter, .service-icon-box {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #9d7b33;
+    margin-right: 20px;
+    min-width: 45px;
+    text-align: center;
+}
+
+.services-preview-section {
+    padding: 85px 0;
+    background-color: #f4efe2;
+    border-top: 1px solid #e5dec9;
+    border-bottom: 1px solid #e5dec9;
+}
+
+.services-video-container {
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    border: 2px solid #caa044;
+}
+
+.services-video {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.office-location-card {
+    background-color: #ffffff;
+    border: 1px solid #dfd8c6;
+    border-top: 3px solid #caa044;
+    border-radius: 6px;
+    padding: 30px 22px;
+    text-align: left;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.office-city {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.footer-nav-links a {
+    color: #caa044;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0 8px;
+}
+
+.footer-nav-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright-text {
+    font-size: 0.84rem;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+/* Screenshot refinements and responsive layout. Bootstrap supplies the columns. */
+.gamzo-header {
+    background: transparent;
+    border: 0;
+    padding: 22px 0;
+}
+
+.gamzo-header > .container {
+    gap: 20px;
+}
+
+.brand-logo-img {
+    width: 205px;
+    height: auto;
+    max-height: 65px;
+}
+
+.main-nav ul {
+    justify-content: center;
+}
+
+.main-nav ul li a {
+    font-size: .76rem;
+    letter-spacing: .3px;
+    text-transform: none;
+}
+
+.login-btn {
+    border: 0;
+    background: transparent;
+    letter-spacing: 0;
+    font-size: .8rem;
+    padding: 0;
+}
+
+#hero-banner {
+    min-height: 100vh;
+    padding-bottom: 68px;
+    border: 0;
+}
+
+.hero-bg-video {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-video-overlay {
+    pointer-events: none;
+    background: linear-gradient(90deg,rgba(0,0,0,.48),rgba(0,0,0,.13));
+}
+
+.hero-body-wrapper {
+    padding-top: clamp(100px,23vh,250px);
+    pointer-events: none;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.hero-headline {
+    max-width: 850px;
+    font-size: clamp(42px,4.9vw,76px);
+    line-height: 1;
+    font-weight: 600;
+}
+
+.hero-subtext {
+    max-width: 680px;
+    font-size: 16px;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    pointer-events: auto;
+}
+
+.btn-gamzo {
+    font-size: 12px;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 12px 17px;
+    background: #c4a22d;
+    border-color: #c4a22d;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.serif-heading {
+    font-size: clamp(36px,4vw,60px);
+}
+
+.gold-divider {
+    width: 140px;
+    background: #c4a22d;
+    margin-bottom: 45px;
+}
+
+.intro-section {
+    padding: 50px 0 65px;
+}
+
+.intro-copy-wrapper {
+    max-width: 920px;
+}
+
+.intro-paragraph, .intro-paragraph-sub {
+    text-align: left;
+}
+
+.quote-banner {
+    text-align: left !important;
+    color: #fff;
+    border: 0;
+    padding: 100px 0;
+    background-position: center;
+}
+
+.quote-banner-title {
+    font-family: 'Cormorant Garamond',Georgia,serif;
+    font-size: 54px;
+    line-height: 1;
+}
+
+.workflow-section, .services-preview-section {
+    background: linear-gradient(#fffefa,#f8f3e5);
+    border: 0;
+    padding: 65px 0 85px;
+}
+
+.featured-villa-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border: 0;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.step-card, .service-spec-card {
+    border: 1px solid #c4a22d;
+    border-radius: 0;
+    min-height: 96px;
+    margin-bottom: 17px;
+}
+
+.step-counter {
+    font-family: Georgia,serif;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.step-title, .service-spec-info h3 {
+    font-family: Georgia,serif;
+    font-size: 17px;
+}
+
+.step-text, .service-spec-info p {
+    font-size: 12px;
+}
+
+.services-video-container {
+    border: 0;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.services-video {
+    height: 455px;
+}
+
+.offices-section {
+    background: #f7f8f9;
+}
+
+.office-location-card {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 240px;
+}
+
+.office-detail {
+    font-size: 12px;
+    color: #62666c;
+}
+
+.office-detail a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.office-glyph {
+    color: #ba9730;
+    margin-right: 8px;
+}
+
+.contact-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: white;
+    color: #303629;
+    box-shadow: 0 4px 20px #0002;
+    text-decoration: none;
+}
+
+:focus-visible {
+    outline: 3px solid #bc972c;
+    outline-offset: 4px;
+}
+
+@media(max-width:1199px) {
+    .header-actions {
+        display: none;
+    }
+    
+    .gamzo-header > .container {
+        justify-content: center !important;
+    }
+}
+
+@media(max-width:767px) {
+    .gamzo-header > .container {
+        flex-direction: column;
+    }
+    
+    .main-nav ul {
+        gap: 12px !important;
+    }
+    
+    .hero-body-wrapper {
+        padding-top: 90px;
+    }
+    
+    .hero-headline {
+        font-size: 44px;
+    }
+    
+    .hero-subtext {
+        font-size: 14px;
+    }
+    
+    .hero-cta-group {
+        gap: 8px;
+    }
+    
+    .btn-gamzo {
+        padding: 10px 12px;
+    }
+    
+    .quote-banner {
+        padding: 70px 0;
+    }
+    
+    .quote-banner-title {
+        font-size: 40px;
+    }
+    
+    .services-video {
+        height: auto;
+    }
+    
+    .contact-float {
+        bottom: 12px;
+        right: 12px;
+        font-size: 12px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}

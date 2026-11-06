@@ -1,0 +1,421 @@
+/* ==========================================================================
+   PAGE 2: MEDIA.CSS
+   Rubric Practised: Box Model (width, height, margin, padding, box-sizing);
+   Background Image; Display, Position, Float, Overflow; Distinct Navbar #2.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Rubric: Box Model */
+}
+
+body#media-page {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fbf9f4;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.section-heading, .media-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.section-heading {
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-align: center;
+    color: #111111;
+}
+
+.gold-line {
+    width: 55px;
+    height: 3px;
+    background-color: #c99a38;
+    margin: 10px auto 30px auto;
+}
+
+/* NAVBAR STYLE #2: Solid Obsidian Header with Gold Pill Active Link */
+.header-dark {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #0b0b0b;
+    border-bottom: 2px solid #caa044;
+    padding: 16px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.brand-logo-img {
+    height: 56px;
+    max-width: 240px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.main-nav ul li {
+    display: inline-block;
+}
+
+.main-nav ul li a {
+    display: inline-block;
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 7px 15px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: #caa044;
+    color: #0b0b0b;
+    font-weight: 600;
+}
+
+.login-btn {
+    display: inline-block;
+    color: #caa044;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+/* Rubric: Background Image */
+.media-hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.78)),
+                url('../assets/images/journey.jpg') center/cover no-repeat;
+    padding: 85px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.gold-subtitle {
+    display: inline-block;
+    color: #caa044;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.media-title {
+    font-size: 3rem;
+    margin: 12px 0;
+}
+
+.media-desc {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #dddddd;
+    font-size: 0.95rem;
+}
+
+.page-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.showcase-section, .procedure-section, .specs-table-section {
+    margin-bottom: 70px;
+}
+
+/* Rubric: Float & Box Model */
+.floated-media-box {
+    float: left;
+    width: 48%;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 14px;
+    background-color: #ffffff;
+    border: 1px solid #e2ded5;
+    border-radius: 6px;
+}
+
+/* Rubric: Position (relative parent, absolute badge child) & Overflow */
+.video-container {
+    position: relative;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000000;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.badge-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(202, 160, 68, 0.95);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.audio-container {
+    margin-top: 15px;
+    padding: 12px;
+    background: #faf8f2;
+    border: 1px solid #e2ded5;
+    border-radius: 4px;
+}
+
+.audio-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333333;
+}
+
+.audio-container audio {
+    width: 100%;
+    height: 36px;
+}
+
+.text-content h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.85rem;
+    margin-bottom: 12px;
+}
+
+.text-content p {
+    color: #4a4a4a;
+    font-size: 0.92rem;
+    margin-bottom: 14px;
+}
+
+/* Required Image Box Model Styling */
+.cabin-preview-card {
+    display: inline-block;
+    width: 48%;
+    margin: 8px 0 16px 0;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #dfd8c8;
+    border-radius: 6px;
+}
+
+.cabin-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.cabin-img-caption {
+    display: block;
+    font-size: 0.78rem;
+    color: #666666;
+    margin-top: 6px;
+    text-align: center;
+    font-style: italic;
+}
+
+.list-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.amenities-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555555;
+    font-size: 0.88rem;
+}
+
+.amenities-list li {
+    margin-bottom: 6px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.procedure-card {
+    background: #ffffff;
+    border: 1px solid #dfd8c8;
+    border-radius: 6px;
+    padding: 28px 34px;
+}
+
+.charter-steps-list {
+    padding-left: 20px;
+    color: #444444;
+}
+
+.charter-steps-list li {
+    margin-bottom: 16px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.charter-steps-list strong {
+    color: #111111;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+/* Rubric: Explicit Box Height + Overflow Auto */
+.compliance-scroll-box {
+    width: 100%;
+    height: 255px;
+    padding: 22px;
+    background-color: #161616;
+    color: #d8d8d8;
+    border: 1px solid #caa044;
+    border-radius: 6px;
+    overflow-y: auto;
+    font-size: 0.84rem;
+}
+
+.scroll-box-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #caa044;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 6px;
+}
+
+.table-caption-text {
+    font-size: 0.88rem;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* Rubric: Overflow X on Responsive Table Wrapper */
+.table-overflow-wrapper {
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #e0ded8;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    text-align: left;
+}
+
+.specs-table th {
+    background-color: #1a1a1a;
+    color: #caa044;
+    padding: 14px 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.specs-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #f0eee6;
+    color: #333333;
+}
+
+.specs-table tbody tr:hover {
+    background-color: #faf8f2;
+}
+
+.rate-badge {
+    display: inline-block;
+    background-color: #eedfb8;
+    color: #72571c;
+    padding: 3px 9px;
+    border-radius: 3px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.simple-site-footer {
+    background-color: #0b0b0b;
+    color: #888888;
+    padding: 30px 0;
+    border-top: 1px solid #1a1a1a;
+}
+
+.copyright-text {
+    font-size: 0.85rem;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.main-nav ul {
+    justify-content: center;
+}
+
+.gamzo-header > .container {
+    gap: 20px;
+}
+
+table caption {
+    padding: 15px;
+    font-size: 12px;
+}
+
+th[scope="row"] {
+    padding: 18px;
+}
+
+.simple-site-footer a {
+    color: #d2b45f;
+}
+
+@media(max-width:1199px) {
+    .header-actions {
+        display: none;
+    }
+    
+    .gamzo-header > .container {
+        justify-content: center !important;
+    }
+}
+
+@media(max-width:767px) {
+    .gamzo-header > .container {
+        flex-direction: column;
+    }
+    
+    .main-nav ul {
+        gap: 6px !important;
+    }
+    
+    .main-nav ul li a {
+        padding: 8px;
+        font-size: 11px;
+    }
+    
+    .floated-media-box {
+        float: none;
+        width: 100%;
+        margin: 0 0 25px;
+    }
+    
+    .media-title {
+        font-size: 34px;
+    }
+    
+    .media-hero-banner {
+        padding: 55px 0;
+    }
+}

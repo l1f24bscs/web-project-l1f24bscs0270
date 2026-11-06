@@ -1,0 +1,278 @@
+/* ==========================================================================
+   PAGE 3: REGISTER.CSS
+   Rubric Practised: Attribute Selectors, Combinators ( , >, +, ~),
+   Pseudo-classes (:hover, :focus, :valid, :invalid),
+   Pseudo-elements (::before, ::after, ::placeholder); Distinct Navbar #3.
+   ========================================================================== */
+
+body#register-page {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f1ea;
+    color: #1a1a1a;
+}
+
+.page-title, .form-section-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* NAVBAR STYLE #3: Warm Ivory & Charcoal Luxury Header (Distinct from Home & Media) */
+.header-ivory {
+    background-color: #fdfbf7;
+    border-bottom: 2px solid #d4c49e;
+    padding: 18px 0;
+}
+
+.brand-logo-img {
+    height: 56px;
+    max-width: 240px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+    background-color: #141414;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* Descendant Combinator ( ) */
+.header-ivory .main-nav ul li a {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 6px 10px;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.header-ivory .main-nav ul li a:hover,
+.header-ivory .main-nav ul li a.active {
+    color: #9e7822;
+    border-left: 2px solid #caa044;
+    background-color: #f3ede0;
+}
+
+.header-ivory .login-btn {
+    background-color: #141414;
+    color: #caa044;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 4px;
+}
+
+.request-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)),
+                url('../assets/images/journey.jpg') center/cover;
+}
+
+.gold-subtitle {
+    color: #caa044;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.hero-desc {
+    max-width: 720px;
+    color: #e2e2e2;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   COMBINATORS (Child >, Adjacent Sibling +, General Sibling ~, Descendant)
+   ========================================================================== */
+
+/* 1. Child Combinator (>) */
+.concierge-form > h4.form-section-title {
+    border-bottom: 2px solid #e5e0d3;
+    padding-bottom: 8px;
+    margin-top: 12px;
+    color: #111111;
+    font-size: 1.65rem;
+    font-weight: 600;
+}
+
+/* 2. Adjacent Sibling Combinator (+) */
+h4.form-section-title + p.section-helper-note {
+    font-size: 0.83rem;
+    color: #7a6e57;
+    font-style: italic;
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+
+/* 3. General Sibling Combinator (~) */
+h4.form-section-title ~ .row {
+    padding-left: 4px;
+}
+
+/* ==========================================================================
+   ATTRIBUTE SELECTORS (Rubric Requirement)
+   ========================================================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    background-color: #fdfcf9;
+    border: 1px solid #d6d0c2;
+    font-size: 0.9rem;
+}
+
+input[readonly] {
+    background-color: #efeae0;
+    color: #5c5340;
+    font-weight: 600;
+    border: 1px dashed #b9ac8e;
+    cursor: not-allowed;
+}
+
+input[disabled] {
+    background-color: #e2e2e2;
+    color: #777777;
+    border: 1px solid #cccccc;
+    cursor: not-allowed;
+}
+
+input[type="file"] {
+    border: 1px dashed #caa044;
+    background-color: #fbf8f1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background: #caa044;
+}
+
+/* ==========================================================================
+   PSEUDO-CLASSES (:hover, :focus, :valid, :invalid)
+   ========================================================================== */
+
+.form-control:hover,
+.form-select:hover {
+    border-color: #b89446;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #caa044;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 0.22rem rgba(202, 160, 68, 0.25);
+}
+
+.form-control:valid:not(:placeholder-shown):not([readonly]):not([disabled]) {
+    border-left: 4px solid #28a745;
+}
+
+.form-control:invalid:not(:placeholder-shown) {
+    border-left: 4px solid #dc3545;
+    background-color: #fff8f8;
+}
+
+.btn-gold {
+    background-color: #caa044;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-gold:hover {
+    background-color: #b58d34;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   PSEUDO-ELEMENTS (::before, ::after, ::placeholder)
+   ========================================================================== */
+
+.form-section-title::before {
+    content: "✦ ";
+    color: #caa044;
+    font-size: 1.1rem;
+}
+
+label[for="fullName"]::after,
+label[for="email"]::after,
+label[for="phone"]::after,
+label[for="portalPass"]::after,
+label[for="destination"]::after,
+label[for="travelDate"]::after {
+    content: " *";
+    color: #c93b2b;
+    font-weight: 700;
+}
+
+.form-control::placeholder {
+    color: #9e988c;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.emergency-banner {
+    background-color: #1a1a1a;
+}
+
+.simple-site-footer {
+    background-color: #0b0b0b;
+    color: #888888;
+    padding: 30px 0;
+    border-top: 1px solid #1a1a1a;
+}
+
+.copyright-text {
+    font-size: 0.85rem;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.gamzo-header > .container {
+    gap: 20px;
+}
+
+.main-nav ul {
+    justify-content: center;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+:focus-visible {
+    outline: 3px solid #aa862a;
+    outline-offset: 3px;
+}
+
+@media(max-width:1199px) {
+    .header-actions {
+        display: none;
+    }
+    
+    .gamzo-header > .container {
+        justify-content: center !important;
+    }
+}
+
+@media(max-width:767px) {
+    .gamzo-header > .container {
+        flex-direction: column;
+    }
+    
+    .main-nav ul {
+        gap: 8px !important;
+    }
+    
+    .main-nav ul li a {
+        font-size: 11px;
+    }
+    
+    .page-title {
+        font-size: 36px;
+    }
+}
