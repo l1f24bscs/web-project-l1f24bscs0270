@@ -1,204 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Private Travel Request | GamzoScape</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/register.css">
-    </head>
-    <body id="register-page">
-        <!-- Navigation Bar (Style 3: Warm Ivory Luxury Header with Dark Serif Branding) -->
-        <header class="gamzo-header header-ivory">
-            <div class="container d-flex flex-wrap justify-content-between align-items-center">
-                <div class="logo-area">
-                    <a href="index.html">
-                        <img src="assets/images/logo.png" alt="GamzoScape Logo" class="brand-logo-img">
-                    </a>
-                </div>
-                <nav class="main-nav" aria-label="Main navigation">
-                    <ul class="d-flex flex-wrap list-unstyled mb-0 gap-3">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="media.html">Media</a></li>
-                        <li><a href="register.html" class="active">Register</a></li>
-                        <li><a href="index.html#private-jets">Private Jets</a></li>
-                        <li><a href="index.html#yachts">Yachts</a></li>
-                        <li><a href="index.html#villas">Villas</a></li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
-                    <a href="register.html" class="login-btn">&#128274; VIP CONCIERGE</a>
-                </div>
-            </div>
-        </header>
-        <section class="request-hero text-center text-white py-5">
-            <div class="container py-4">
-                <span class="gold-subtitle text-uppercase">Get in Touch</span>
-                <h1 class="page-title my-2">Private Travel Request</h1>
-                <p class="hero-desc mx-auto">
-                    GamzoScape operates as a private travel concierge. We do not display public inventory or instant bookings. Every request is reviewed by our team to ensure availability, discretion, and alignment with our service standards.
-                </p>
-            </div>
-        </section>
-        <div class="container quick-contact-bar bg-white shadow-sm rounded p-3 mb-4">
-            <div class="row text-center text-muted small g-2">
-                <div class="col-md-4">&#128222; +923034564856</div>
-                <div class="col-md-4">&#9993; info@gamzoscape.com</div>
-                <div class="col-md-4">&#128338; Private travel enquiries</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Travel Request | GamzoScape</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body id="register-page">
+
+  <!-- Shared Media-style header for secondary pages. -->
+  <header class="gamzo-header header-dark">
+        <div class="container d-flex flex-wrap flex-column flex-md-row justify-content-center justify-content-xl-between align-items-center gap-3">
+            <a href="index.html" aria-label="GamzoScape home">
+                <img src="assets/images/logo.png" alt="GamzoScape" class="brand-logo-img">
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="d-flex flex-wrap justify-content-center list-unstyled m-0 p-0 gap-2">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions d-none d-xl-block">
+                <a href="register.html" class="login-btn">&#128100; PORTAL ACCESS</a>
             </div>
         </div>
-        <main class="container mb-5">
-            <div class="form-card bg-white p-4 p-md-5 rounded shadow-sm">
-                <!-- Form covers all 14 required input types and 9 required attributes -->
-                <form id="request-form" class="concierge-form">
-                    <p class="section-helper-note">Required fields must be completed. This is a demonstration: no account is created, no data is sent, and files remain on your device. Use a sample password.</p>
-                    <h4 class="form-section-title">Contact Details</h4>
-                    <p class="section-helper-note">Please provide direct principal or executive assistant contact credentials.</p>
-                    <div class="row g-3 mb-4">
-                        <!-- 1. text + required + minlength + maxlength -->
-                        <div class="col-md-6">
-                            <label for="fullName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Your full name" required minlength="3" maxlength="50">
-                        </div>
-                        <!-- 2. email + required -->
-                        <div class="col-md-6">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="client@domain.com" required>
-                        </div>
-                        <!-- text + maxlength -->
-                        <div class="col-md-4">
-                            <label for="phone" class="form-label">Phone / WhatsApp</label>
-                            <input type="text" class="form-control" id="phone" name="phone" placeholder="+923034564856" required minlength="8" maxlength="18">
-                        </div>
-                        <!-- 3. password + required + minlength + maxlength -->
-                        <div class="col-md-4">
-                            <label for="portalPass" class="form-label">Client Portal PIN</label>
-                            <input type="password" class="form-control" id="portalPass" placeholder="6 to 12 characters" required minlength="6" maxlength="12">
-                        </div>
-                        <!-- readonly attribute -->
-                        <div class="col-md-2">
-                            <label for="refId" class="form-label">Booking Ref</label>
-                            <input type="text" class="form-control" id="refId" name="refId" value="GMZ-2026-X9" readonly>
-                        </div>
-                        <!-- disabled attribute -->
-                        <div class="col-md-2">
-                            <label for="clearanceTier" class="form-label">Clearance Tier</label>
-                            <input type="text" class="form-control" id="clearanceTier" name="clearanceTier" value="Not assigned" disabled>
-                        </div>
-                    </div>
-                    <h4 class="form-section-title">Your Request</h4>
-                    <p class="section-helper-note">Select your primary asset preference and charter structure.</p>
-                    <div class="row g-3 mb-4">
-                        <!-- 4. select + disabled + selected -->
-                        <div class="col-md-6">
-                            <label for="experienceType" class="form-label">How do you prefer to experience a destination?</label>
-                            <select class="form-select" id="experienceType" name="experienceType" required>
-                                <option value="" disabled>Select Experience...</option>
-                                <option value="residence" selected>Private Residence</option>
-                                <option value="yacht">Superyacht Charter</option>
-                                <option value="aviation">Private Aviation</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="residenceList" class="form-label">Private Residence / Asset Choice</label>
-                            <select class="form-select" id="residenceList" name="residenceList">
-                                <option value="villa-grande" selected>Villa Grande (Ibiza)</option>
-                                <option value="villa-amira">Villa Amira (Marbella)</option>
-                                <option value="amaryllis">Amaryllis Yacht (60m)</option>
-                                <option value="g800">Gulfstream G800 Heavy Jet</option>
-                                <option value="island-vault" disabled>Calivigny Island (Season Fully Booked)</option>
-                            </select>
-                        </div>
-                        <!-- 5. radio + checked -->
-                        <div class="col-12">
-                            <label class="form-label d-block">Charter Arrangement</label>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="charterType" id="oneWay" value="oneway" checked>
-                                <label class="form-check-label" for="oneWay">Single Journey / One-way</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="charterType" id="roundTrip" value="roundtrip">
-                                <label class="form-check-label" for="roundTrip">Round-Trip / Extended Stay</label>
-                            </div>
-                        </div>
-                    </div>
-                    <h4 class="form-section-title">Journey Details</h4>
-                    <p class="section-helper-note">Specify your target dates, party size, and bespoke cabin setup.</p>
-                    <div class="row g-3 mb-4">
-                        <div class="col-md-4">
-                            <label for="destination" class="form-label">Destination</label>
-                            <input type="text" class="form-control" id="destination" name="destination" placeholder="Enter destination (e.g. Monaco)" required>
-                        </div>
-                        <!-- 6. date + min + max -->
-                        <div class="col-md-4">
-                            <label for="travelDate" class="form-label">Travel Date</label>
-                            <input type="date" class="form-control" id="travelDate" name="travelDate" min="2026-11-01" max="2027-12-31" required>
-                        </div>
-                        <!-- 7. time -->
-                        <div class="col-md-4">
-                            <label for="travelTime" class="form-label">Preferred Time Window</label>
-                            <input type="time" class="form-control" id="travelTime" name="travelTime" value="10:00">
-                        </div>
-                        <!-- 8. number + min + max -->
-                        <div class="col-md-4">
-                            <label for="guests" class="form-label">Guests / Passengers</label>
-                            <input type="number" class="form-control" id="guests" name="guests" min="1" max="50" value="4" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="bedrooms" class="form-label">Bedrooms / Staterooms</label>
-                            <input type="number" class="form-control" id="bedrooms" name="bedrooms" min="1" max="20" placeholder="Enter bedrooms (1-20)">
-                        </div>
-                        <!-- 9. color -->
-                        <div class="col-md-4">
-                            <label for="moodColor" class="form-label">Cabin Lighting Mood Accent</label>
-                            <input type="color" class="form-control form-control-color w-100" id="moodColor" name="moodColor" value="#caa044">
-                        </div>
-                        <!-- 10. url -->
-                        <div class="col-md-6">
-                            <label for="itineraryUrl" class="form-label">Reference Itinerary / Moodboard Link</label>
-                            <input type="url" class="form-control" id="itineraryUrl" name="itineraryUrl" placeholder="https://pinterest.com/itinerary">
-                        </div>
-                        <!-- 11. file -->
-                        <div class="col-md-6">
-                            <label for="manifestFile" class="form-label">Upload a travel inspiration image</label>
-                            <input type="file" class="form-control" id="manifestFile" accept="image/png,image/jpeg">
-                        </div>
-                        <!-- 12. range + min + max -->
-                        <div class="col-12">
-                            <label for="budgetRange" class="form-label d-flex justify-content-between">
-                                <span>Weekly Indicative Budget Scale</span>
-                                <span class="text-muted small">&euro;15,000 &mdash; &euro;150,000+</span>
-                            </label>
-                            <input type="range" class="form-range" id="budgetRange" name="budgetRange" min="15000" max="150000" step="5000" value="65000">
-                        </div>
-                        <!-- 13. textarea + minlength + maxlength -->
-                        <div class="col-12">
-                            <label for="additionalNotes" class="form-label">Additional Notes &amp; Dietary Requirements</label>
-                            <textarea class="form-control" id="additionalNotes" name="additionalNotes" rows="4" minlength="10" maxlength="500" placeholder="Preferences, security details, or special requests we should know."></textarea>
-                        </div>
-                        <!-- 14. checkbox + required + checked -->
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="ndaCheck" name="ndaCheck" required checked>
-                                <label class="form-check-label small" for="ndaCheck">
-                                    I understand that this is a demonstration enquiry form.
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-gold px-4 py-2">&#9993; Submit Private Request</button>
-                </form>
-                <div id="form-result" class="alert alert-success mt-4" role="status" tabindex="-1" hidden>Your demo request passed browser validation. No details were sent or stored. For an enquiry, email info@gamzoscape.com.</div>
+    </header>
+
+  <section class="request-hero text-center text-white py-5">
+    <div class="container py-4">
+      <span class="gold-subtitle text-uppercase">Get in Touch</span>
+      <h1 class="page-title my-2">Private Travel Request</h1>
+      <p class="hero-desc mx-auto">
+        GamzoScape operates as a private travel concierge. We do not display public inventory or instant bookings. Every request is reviewed by our team to ensure availability, discretion, and alignment with our service standards.
+      </p>
+    </div>
+  </section>
+
+  <div class="container quick-contact-bar bg-white shadow-sm rounded p-3 mb-4">
+    <div class="row text-center text-muted small g-2">
+      <div class="col-md-4">&#128222; +923034564856</div>
+      <div class="col-md-4">&#9993; info@gamzoscape.com</div>
+      <div class="col-md-4">&#128338; Private travel enquiries</div>
+    </div>
+  </div>
+
+  <main class="container mb-5">
+    <div class="form-card bg-white p-4 p-md-5 rounded shadow-sm">
+      <!-- Form covers all 14 required input types and 9 required attributes -->
+      <form id="request-form" class="concierge-form"><p class="section-helper-note">Required fields must be completed. This is a demonstration: no account is created, no data is sent, and files remain on your device. Use a sample password.</p>
+
+        <h4 class="form-section-title">Contact Details</h4>
+        <p class="section-helper-note">Please provide direct principal or executive assistant contact credentials.</p>
+        <div class="row g-3 mb-4">
+          <!-- 1. text + required + minlength + maxlength -->
+          <div class="col-md-6">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Your full name" required minlength="3" maxlength="50">
+          </div>
+          <!-- 2. email + required -->
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="client@domain.com" required>
+          </div>
+          <!-- text + maxlength -->
+          <div class="col-md-4">
+            <label for="phone" class="form-label">Phone / WhatsApp</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="+923034564856" required minlength="8" maxlength="18">
+          </div>
+          <!-- 3. password + required + minlength + maxlength -->
+          <div class="col-md-4">
+            <label for="portalPass" class="form-label">Client Portal PIN</label>
+            <input type="password" class="form-control" id="portalPass"  placeholder="6 to 12 characters" required minlength="6" maxlength="12">
+          </div>
+          <!-- readonly attribute -->
+          <div class="col-md-2">
+            <label for="refId" class="form-label">Booking Ref</label>
+            <input type="text" class="form-control" id="refId" name="refId" value="GMZ-2026-X9" readonly>
+          </div>
+          <!-- disabled attribute -->
+          <div class="col-md-2">
+            <label for="clearanceTier" class="form-label">Clearance Tier</label>
+            <input type="text" class="form-control" id="clearanceTier" name="clearanceTier" value="Not assigned" disabled>
+          </div>
+        </div>
+
+        <h4 class="form-section-title">Your Request</h4>
+        <p class="section-helper-note">Select your primary asset preference and charter structure.</p>
+        <div class="row g-3 mb-4">
+          <!-- 4. select + disabled + selected -->
+          <div class="col-md-6">
+            <label for="experienceType" class="form-label">How do you prefer to experience a destination?</label>
+            <select class="form-select" id="experienceType" name="experienceType" required>
+              <option value="" disabled>Select Experience...</option>
+              <option value="residence" selected>Private Residence</option>
+              <option value="yacht">Superyacht Charter</option>
+              <option value="aviation">Private Aviation</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="residenceList" class="form-label">Private Residence / Asset Choice</label>
+            <select class="form-select" id="residenceList" name="residenceList">
+              <option value="villa-grande" selected>Villa Grande (Ibiza)</option>
+              <option value="villa-amira">Villa Amira (Marbella)</option>
+              <option value="amaryllis">Amaryllis Yacht (60m)</option>
+              <option value="g800">Gulfstream G800 Heavy Jet</option>
+              <option value="island-vault" disabled>Calivigny Island (Season Fully Booked)</option>
+            </select>
+          </div>
+          <!-- 5. radio + checked -->
+          <div class="col-12">
+            <label class="form-label d-block">Charter Arrangement</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="charterType" id="oneWay" value="oneway" checked>
+              <label class="form-check-label" for="oneWay">Single Journey / One-way</label>
             </div>
-        </main>
-        <footer class="simple-site-footer text-center">
-            <div class="container">
-                <p class="copyright-text">&copy; 2026 GamzoScape — Private travel office. Academic website demonstration.</p>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="charterType" id="roundTrip" value="roundtrip">
+              <label class="form-check-label" for="roundTrip">Round-Trip / Extended Stay</label>
             </div>
-        </footer>
-        <script src="js/register.js"></script>
-    </body>
+          </div>
+        </div>
+
+        <h4 class="form-section-title">Journey Details</h4>
+        <p class="section-helper-note">Specify your target dates, party size, and bespoke cabin setup.</p>
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" class="form-control" id="destination" name="destination" placeholder="Enter destination (e.g. Monaco)" required>
+          </div>
+          <!-- 6. date + min + max -->
+          <div class="col-md-4">
+            <label for="travelDate" class="form-label">Travel Date</label>
+            <input type="date" class="form-control" id="travelDate" name="travelDate" min="2026-11-01" max="2027-12-31" required>
+          </div>
+          <!-- 7. time -->
+          <div class="col-md-4">
+            <label for="travelTime" class="form-label">Preferred Time Window</label>
+            <input type="time" class="form-control" id="travelTime" name="travelTime" value="10:00">
+          </div>
+          <!-- 8. number + min + max -->
+          <div class="col-md-4">
+            <label for="guests" class="form-label">Guests / Passengers</label>
+            <input type="number" class="form-control" id="guests" name="guests" min="1" max="50" value="4" required>
+          </div>
+          <div class="col-md-4">
+            <label for="bedrooms" class="form-label">Bedrooms / Staterooms</label>
+            <input type="number" class="form-control" id="bedrooms" name="bedrooms" min="1" max="20" placeholder="Enter bedrooms (1-20)">
+          </div>
+          <!-- 9. color -->
+          <div class="col-md-4">
+            <label for="moodColor" class="form-label">Cabin Lighting Mood Accent</label>
+            <input type="color" class="form-control form-control-color w-100" id="moodColor" name="moodColor" value="#caa044">
+          </div>
+          <!-- 10. url -->
+          <div class="col-md-6">
+            <label for="itineraryUrl" class="form-label">Reference Itinerary / Moodboard Link</label>
+            <input type="url" class="form-control" id="itineraryUrl" name="itineraryUrl" placeholder="https://pinterest.com/itinerary">
+          </div>
+          <!-- 11. file -->
+          <div class="col-md-6">
+            <label for="manifestFile" class="form-label">Upload a travel inspiration image</label>
+            <input type="file" class="form-control" id="manifestFile" accept="image/png,image/jpeg">
+          </div>
+          <!-- 12. range + min + max -->
+          <div class="col-12">
+            <label for="budgetRange" class="form-label d-flex justify-content-between">
+              <span>Weekly Indicative Budget Scale</span>
+              <span class="text-muted small">&euro;15,000 &mdash; &euro;150,000+</span>
+            </label>
+            <input type="range" class="form-range" id="budgetRange" name="budgetRange" min="15000" max="150000" step="5000" value="65000">
+          </div>
+          <!-- 13. textarea + minlength + maxlength -->
+          <div class="col-12">
+            <label for="additionalNotes" class="form-label">Additional Notes &amp; Dietary Requirements</label>
+            <textarea class="form-control" id="additionalNotes" name="additionalNotes" rows="4" minlength="10" maxlength="500" placeholder="Preferences, security details, or special requests we should know."></textarea>
+          </div>
+          <!-- 14. checkbox + required + checked -->
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="ndaCheck" name="ndaCheck" required checked>
+              <label class="form-check-label small" for="ndaCheck">
+                I understand that this is a demonstration enquiry form.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-gold px-4 py-2">&#9993; Submit Private Request</button>
+      </form><div id="form-result" class="alert alert-success mt-4" role="status" tabindex="-1" hidden>Your demo request passed browser validation. No details were sent or stored. For an enquiry, email info@gamzoscape.com.</div>
+    </div>
+  </main>
+
+  <section class="emergency-banner py-4 text-white text-center">
+    <div class="container">
+      <h5 class="text-uppercase mb-2 text-warning">Speak with GamzoScape</h5>
+      <p class="mb-2 small">For travel enquiries, contact:</p>
+      <a href="tel:+923034564856" class="text-white text-decoration-none fw-bold fs-5">+923034564856</a>
+    </div>
+  </section>
+
+  <footer class="simple-site-footer text-center">
+    <div class="container">
+      <p class="copyright-text">&copy; 2026 GamzoScape — Private travel office. Academic website demonstration.</p>
+    </div>
+  </footer>
+
+<script src="js/register.js"></script></body>
 </html>
