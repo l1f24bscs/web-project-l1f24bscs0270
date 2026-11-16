@@ -1,0 +1,269 @@
+/* Portfolio: named Grid areas, keyframe animations and responsive layouts. */
+body {
+    color: #292a25;
+    font: 16px/1.65 Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+p {
+    margin: 1em 0;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 5px;
+}
+
+.eyebrow {
+    color: #806124;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+:focus-visible {
+    outline: 3px solid #a57d2b;
+    outline-offset: 5px;
+}
+
+footer {
+    padding: 30px 5%;
+    font-size: .75rem;
+}
+
+footer>a:first-child {
+    font: 1.5rem Georgia, serif;
+    text-decoration: none;
+}
+
+body {
+    background: #f8f6f0;
+}
+
+.gallery-intro {
+    max-width: 760px;
+    padding: 65px 25px 48px;
+    animation: reveal .8s ease both;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 5.8rem);
+    letter-spacing: -2px;
+    margin: 20px 0;
+}
+
+.gallery-intro>p:not(.eyebrow) {
+    max-width: 520px;
+    margin: auto;
+    color: #696558;
+}
+
+.intro-rule {
+    display: block;
+    width: 65px;
+    height: 2px;
+    background: #ad873b;
+    margin: 32px auto 0;
+    transform-origin: left;
+    animation: draw-line 1s ease both;
+}
+
+.gallery-section {
+    max-width: 1320px;
+    padding: 0 5% 65px;
+}
+
+.gallery-heading {
+    align-items: baseline;
+    border-top: 1px solid #d7d0be;
+}
+
+.gallery-heading h2 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.gallery-heading>p {
+    color: #706b5e;
+    font-size: .7rem;
+}
+
+.travel-gallery {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-areas: "residence coast" "note coast";
+    gap: 32px 40px;
+    align-items: start;
+}
+
+.residence-study {
+    grid-area: residence;
+}
+
+.coast-study {
+    grid-area: coast;
+}
+
+.gallery-item {
+    min-width: 0;
+}
+
+.photo-frame {
+    background: #e4dfd3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 340px;
+    transition: transform .6s ease;
+}
+
+.coast-study img {
+    height: 580px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.035);
+}
+
+.image-number {
+    color: #8b713e;
+    font-size: .75rem;
+}
+
+figcaption h3 {
+    font-size: 1.45rem;
+    margin: 0 0 10px;
+}
+
+figcaption p {
+    font-size: .58rem;
+    letter-spacing: 1.5px;
+    color: #756e5d;
+    margin: 0;
+}
+
+.collection-note {
+    grid-area: note;
+    border-left: 2px solid #b5964f;
+    padding: 0 25px;
+    margin: 10px 0;
+}
+
+.collection-note h2 {
+    font-size: 2.4rem;
+    margin: 12px 0;
+}
+
+.collection-note>p:not(.eyebrow) {
+    max-width: 400px;
+    color: #696558;
+    font-size: .9rem;
+}
+
+.collection-note a {
+    font-size: .8rem;
+}
+
+.gallery-invitation {
+    padding: 60px 25px;
+    background: linear-gradient(120deg, #e8e1d0, #f1eddf);
+}
+
+.gallery-invitation h2 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    margin: 18px 0;
+}
+
+.gallery-invitation>p {
+    color: #625d50;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes draw-line {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@media (max-width: 900px) {
+    .travel-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "residence coast" "note note";
+        gap: 30px 22px;
+    }
+
+    .gallery-item img {
+        height: 340px;
+    }
+
+    .collection-note>p:not(.eyebrow) {
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .travel-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "residence" "coast" "note";
+    }
+
+    .gallery-item img {
+        height: 300px;
+    }
+
+    .gallery-intro {
+        padding-top: 38px;
+    }
+
+    .gallery-heading {
+        align-items: flex-start;
+    }
+
+    .gallery-heading>p {
+        margin: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .gallery-intro,
+    .intro-rule {
+        animation: none;
+    }
+
+    .gallery-item img {
+        transition: none;
+    }
+
+    .gallery-item:hover img {
+        transform: none;
+    }
+}
+
+footer {
+    border-top: 1px solid #d7d0be;
+}

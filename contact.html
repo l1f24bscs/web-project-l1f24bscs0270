@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the GamzoScape concept and shape a personal travel enquiry.">
+    <title>Contact &amp; About | GamzoScape</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/contact.js" defer></script>
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <a class="skip-link visually-hidden-focusable position-fixed top-0 start-0 bg-white px-3 py-2 m-2 z-3" href="#main">Skip to content</a>
+    <header class="gamzo-header header-dark">
+        <div class="container d-flex flex-wrap flex-column flex-md-row justify-content-center justify-content-xl-between align-items-center gap-3">
+            <a href="index.html" aria-label="GamzoScape home">
+                <img src="assets/images/logo.png" alt="GamzoScape" class="brand-logo-img">
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="d-flex flex-wrap justify-content-center list-unstyled m-0 p-0 gap-2">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions d-none d-xl-block">
+                <a href="register.html" class="login-btn">&#128100; PORTAL ACCESS</a>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section class="contact-intro" aria-labelledby="contact-title">
+            <div><p class="eyebrow">YOUR NEXT CHAPTER</p><h1 id="contact-title">Every journey starts<br>with a conversation.</h1></div>
+            <p>A place you have always wanted to see.<br>A little more time together.<br>Tell us what you have in mind.</p>
+        </section>
+        <!-- Grid creates the main columns; Flexbox arranges details and actions. -->
+        <div class="contact-layout">
+            <section class="about-panel" aria-labelledby="about-title">
+                <img src="assets/images/1.png" alt="A peaceful terrace with warm lights and a view of the sea" width="1024" height="576" class="img-fluid d-block object-fit-cover">
+                <div class="about-copy">
+                    <p class="eyebrow">ABOUT GAMZOSCAPE</p>
+                    <h2 id="about-title">Travel, at your pace.</h2>
+                    <p>GamzoScape is a student-designed private travel showcase, bringing residences, coastal escapes and personal journeys into one enquiry-led experience.</p>
+                    <p>The idea is simple: begin with the traveller's preferences, then explore the possibilities. Browse the collection and use this form to practise shaping a request.</p>
+                    <ul class="travel-values d-flex flex-wrap gap-2 list-unstyled m-0 pt-2"><li class="badge border rounded text-dark fw-normal">Personal preferences</li><li class="badge border rounded text-dark fw-normal">Considered details</li><li class="badge border rounded text-dark fw-normal">Room to explore</li></ul>
+                    <a href="services.html">Find your kind of escape <span aria-hidden="true">↗</span></a>
+                </div>
+            </section>
+            <section class="enquiry-panel" aria-labelledby="enquiry-title">
+                <p class="eyebrow">LET'S BEGIN</p>
+                <h2 id="enquiry-title">Tell us about your plans</h2>
+                <p id="demo-note" class="form-note small text-secondary mb-4">This is a demonstration form. Your details stay on this page; nothing is sent or saved. Fields marked * are required.</p>
+                <noscript><p class="no-script-note text-danger">Enable JavaScript to check this demonstration enquiry. The form does not send messages.</p></noscript>
+                <form id="enquiry-form" aria-describedby="demo-note">
+                    <div class="row g-3">
+                        <div class="col-lg-6">
+                            <label class="form-label small fw-bold" for="contact-name">Your name *</label>
+                            <input class="form-control p-3" id="contact-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" placeholder="Full name" aria-describedby="name-error">
+                            <span class="field-error" id="name-error"></span>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="form-label small fw-bold" for="contact-email">Email address *</label>
+                            <input class="form-control p-3" id="contact-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@example.com" aria-describedby="email-error">
+                            <span class="field-error" id="email-error"></span>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-bold" for="contact-service">What would you like to explore? *</label>
+                            <select class="form-select p-3" id="contact-service" name="service" required aria-describedby="service-error">
+                                <option value="" selected disabled>Choose an experience</option>
+                                <option value="residence">Private residences</option>
+                                <option value="coastal">Yachts &amp; coastal escapes</option>
+                                <option value="aviation">Private aviation &amp; concierge</option>
+                                <option value="undecided">I would like some inspiration</option>
+                            </select>
+                            <span class="field-error" id="service-error"></span>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-bold" for="contact-message">Your travel idea *</label>
+                            <textarea class="form-control p-3" id="contact-message" name="message" rows="5" required minlength="20" maxlength="1000" placeholder="Share your destination, dates, group size and what matters to you…" aria-describedby="message-hint message-count message-error"></textarea>
+                            <span class="field-error" id="message-error"></span>
+                            <div class="d-flex justify-content-between flex-wrap gap-2 small text-secondary"><span id="message-hint">At least 20 characters.</span><span id="message-count">0 / 1000</span></div>
+                        </div>
+                    </div>
+                    <div class="form-actions mt-4">
+                        <!-- Enabled by contact.js only after the local handler is ready. -->
+                        <button class="btn btn-dark px-4 py-3" id="check-enquiry" type="submit" disabled>Check my enquiry <span aria-hidden="true">↗</span></button>
+                        <button class="btn btn-link text-secondary p-0" type="reset">Clear form</button>
+                    </div>
+                    <p id="form-status" class="form-status small mt-3" role="status" aria-live="polite" aria-atomic="true"></p>
+                </form>
+            </section>
+        </div>
+        <section class="before-enquiry" aria-labelledby="before-title">
+            <h2 id="before-title">A few details go a long way.</h2>
+            <div class="planning-details row g-4 mx-auto">
+                <div class="col-sm-6 col-lg-4"><span>01</span><h3>Where &amp; when</h3><p>Include your destination and approximate travel dates.</p></div>
+                <div class="col-sm-6 col-lg-4"><span>02</span><h3>Who is travelling</h3><p>Share the size of your group and any practical needs.</p></div>
+                <div class="col-sm-6 col-lg-4"><span>03</span><h3>What matters</h3><p>Tell us about your preferred pace, places and experiences.</p></div>
+            </div>
+        </section>
+    </main>
+    <footer class="d-flex flex-wrap flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3"><a href="index.html">GamzoScape</a><p>© 2026 · Academic travel showcase. No live enquiry service.</p><a href="portfolio.html">Find inspiration ↗</a></footer>
+</body>
+</html>
